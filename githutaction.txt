@@ -1,0 +1,13 @@
+name: Shell Command Example
+
+on: [push] # Triggers the workflow on every code push
+
+jobs:
+  execute-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4 # Recommended to access repository files
+
+      - name: Run Hello World
+        run: echo "Hello from GitHub Actions!"
